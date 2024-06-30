@@ -1,0 +1,149 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+    display: flex;
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+    height: 100vh; /* 100% de la hauteur de la fenêtre */
+}
+
+.login-box {
+    width: fit-content; /* Ajuster la largeur en fonction du contenu */
+    margin: 0 auto; /* Centrer horizontalement */
+    padding: 40px;
+    background: #0000FF;
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+    color: white;
+    position: relative;
+    overflow: hidden; /* Masquer tout contenu dépassant */
+}
+
+
+
+
+.login-header h1 {
+    margin: 0;
+    padding: 0;
+    background-color: #4CAF50;
+    padding: 10px 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    position: relative;
+    font-size: 18px;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: defile 10s linear infinite;
+    color: #fff; /* Modifier la couleur du texte en blanc */
+    background-color: #0000FF; /* Modifier la couleur de fond en bleu */
+}
+
+@keyframes defile {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+.login-header h2 {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    position: relative;
+    top: -10px; /* Ajuster le texte vers le haut */
+}
+
+.login-header h2 {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+.textbox {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.textbox input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #333333;
+    border: none;
+    border-bottom: 1px solid #333333;
+    background: none;
+    outline: none;
+}
+
+.textbox input:focus {
+    border-bottom: 2px solid #4caf50;
+}
+
+.btn {
+    width: 100%;
+    background: #4caf50;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #45a049;
+}
+
+.status-bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: auto;
+    height: 30px;
+    background: transparent; /* Modifier la couleur de fond en transparent */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.icon {
+    width: 24px; /* Réduire la largeur */
+    height: 24px; /* Réduire la hauteur */
+    margin-left: 5px; /* Espacement entre les icônes */
+}
+
+.icon i {
+    font-size: 16px; /* Réduire la taille de l'icône */
+}
+
+
+
+
+.hospital-img {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.login-box img {
+    max-width: 100%;
+    max-height: 150px; /* Ajustez cette valeur selon vos préférences */
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px; /* Espacement entre l'image et les autres éléments */
+}

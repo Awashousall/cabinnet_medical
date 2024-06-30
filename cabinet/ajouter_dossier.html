@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Ajouter un Dossier Médical</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #e6f2ff; /* Bleu clair */
+            color: #000; /* Noir */
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            background-color: #fff; /* Blanc */
+            padding: 0px; /* Ajustez le padding selon vos besoins */
+            border: 1px solid #ccc; /* Bordure grise */
+            border-radius: 0px; /* Coins arrondis */
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Ombre légère */
+            margin-top: 0px;
+        }
+
+        .nav-link.blue {
+            color: blue !important;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 0px;
+            font-size: 32px; /* Taille de la police */
+            color: #007bff; /* Couleur bleue claire */
+            text-align: center; /* Centrer le texte */
+            text-transform: uppercase; /* Mettre en majuscules */
+            margin-top: 10px; /* Marge en haut pour l'espacement */
+            padding: 10px; /* Ajouter un espace à l'intérieur du cadre */
+            border: 1px solid #007bff; /* Bordure de 2px solide bleue claire */
+            border-radius: 5px; /* Coins arrondis de 10px */
+        }
+
+        
+
+        /* Pour ajuster la largeur de l'image de fond */
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Mettre en arrière-plan */
+            opacity: 0.3; /* Opacité réduite */
+        }
+
+        /* Style pour les cellules du tableau */
+        .table td {
+            border: none; /* Supprimez la bordure par défaut */
+            padding: 0px; /* Ajustez l'espacement selon vos besoins */
+        }
+
+        .form-group {
+            margin-bottom: 0; /* Supprimez la marge inférieure par défaut */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-dark">
+        <div class="container">
+            <div class="row">
+                <nav class="col navbar navbar-expand-lg navbar-dark">
+                    <img src="images/png-clipart-hospital-logo-clinic-health-care-physician-business-thumbnail.png" width="40" height="30" alt="Logo du site">
+                    <a class="nav-link blue" href="index.html">MediTeam</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarContent">
+                        <ul class="navbar-nav ">
+                            <li class="nav-item active">
+                                <a class="nav-link blue" href="accueil.html">Accueil</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link blue" href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link blue" href="connexion.html">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image de fond -->
+    <img src="ajout.jpg" class="background-image" alt="Image de fond">
+
+    <div class="container">
+        <h1>Ajouter un Dossier Médical</h1>
+        <form action="ajouter_dossier.php" method="post">
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td><label for="NumDossier">Numéro de Dossier:</label></td>
+                        <td><input type="text" class="form-control" id="NumDossier" name="NumDossier" required></td>
+                        <td><label for="nom_patient">Nom du Patient:</label></td>
+                        <td><input type="text" class="form-control" id="nom_patient" name="nom_patient" required></td>
+                        <td><label for="date">Date:</label></td>
+                        <td><input type="date" class="form-control" id="date" name="date" required></td>
+
+                    </tr>
+                    <tr>
+                        <td><label for="prenom_patient">Prénom du Patient:</label></td>
+                        <td><input type="text" class="form-control" id="prenom_patient" name="prenom_patient" required></td>
+                        <td><label for="poids">Poids:</label></td>
+                        <td><input type="text" class="form-control" id="poids" name="poids"></td>
+                        <td><label for="Temperature">Température:</label></td>
+                        <td><input type="text" class="form-control" id="Temperature" name="Temperature"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Remarque">Remarque:</label></td>
+                        <td><input type="text" class="form-control" id="Remarque" name="Remarque"></td>
+                        <td><label for="Bilan">Bilan:</label></td>
+                        <td><input type="text" class="form-control" id="Bilan" name="Bilan"></td>
+                        <td><label for="Maladie">Maladie:</label></td>
+                        <td><input type="text" class="form-control" id="Maladie" name="Maladie"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Symptomes">Symptômes:</label></td>
+                        <td><input type="text" class="form-control" id="Symptomes" name="Symptomes"></td>
+                        <td><label for="heure">Heure:</label></td>
+                        <td><input type="time" class="form-control" id="heure" name="heure"></td>
+
+                        <td><label for="mail_patient">Mail du Patient:</label></td>
+                        <td><input type="email" class="form-control" id="mail_patient" name="mail_patient"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="mail_medecin">Mail du Médecin:</label></td>
+                        <td><input type="email" class="form-control" id="mail_medecin" name="mail_medecin"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button type="submit" class="btn btn-primary">Ajouter</button>
+        </form>
+    </div>
+
+    <!-- Scripts Bootstrap (ne pas modifier) -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+
+</html>

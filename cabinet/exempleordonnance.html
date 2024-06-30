@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter une ordonnance</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<style>
+    body {
+        background-image: url('ordonnance.jpg'); /* Remplacez 'background.jpg' par le chemin de votre image */
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: #fff; /* Texte en blanc pour un contraste */
+        font-family: Arial, sans-serif;
+    }
+
+    .container {
+        background-color: rgba(0, 0, 0, 0.5); /* Ajoute une couche semi-transparente pour améliorer la lisibilité */
+        padding: 20px;
+        border: 1px solid #ccc; /* Bordure de 1 pixel, solide, couleur grise */
+        border-radius: 5px;
+        margin: 5px; /* 5 pixels de marge de tous les côtés */
+        margin-top: 10px; /* Espacement par rapport au haut de la page */
+        width: 600px;
+    }
+
+    h1 {
+        text-align: center;
+        color: #fff; /* Titre en blanc */
+        margin-bottom: 20px;
+        font-size: 32px; /* Taille de la police */
+        color: #007bff; /* Couleur bleue claire */
+        text-align: center; /* Centrer le texte */
+        text-transform: uppercase; /* Mettre en majuscules */
+        margin-top: 10px; /* Marge en haut pour l'espacement */
+        padding: 10px; /* Ajouter un espace à l'intérieur du cadre */
+        border: 1px solid #007bff; /* Bordure de 2px solide bleue claire */
+        border-radius: 5px; /* Coins arrondis de 10px */
+    }
+
+    .form-group {
+        margin-bottom: 10px; /* Réduire l'espacement entre les champs de formulaire */
+    }
+
+    /* Couleur du texte des étiquettes de formulaire */
+    label {
+        color: #fff;
+    }
+
+    /* Style pour les boutons */
+    .btn-primary {
+        width: 100%;
+    }
+
+    /* Style pour le champ de texte du médicament personnalisé */
+    #autre_medicament {
+        display: none; /* Par défaut, masquer le champ de texte */
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h1>Ajouter une ordonnance</h1>
+        <form method="post" action="traiter_ordonnance.php">
+            <div class="form-group">
+                <label for="nom_patient">Nom du patient :</label>
+                <input type="text" class="form-control" id="nom_patient" name="nom_patient" required>
+            </div>
+            <div class="form-group">
+                <label for="prenom_patient">Prénom du patient :</label>
+                <input type="text" class="form-control" id="prenom_patient" name="prenom_patient" required>
+            </div>
+            <div class="form-group">
+                <label for="id_dossier">ID du dossier :</label>
+                <input type="text" class="form-control" id="id_dossier" name="id_dossier" required>
+            </div>
+
+            <div class="form-group">
+                <label for="medicament">Médicaments :</label><br>
+                <input type="checkbox" id="paracetamol" name="medicament[]" value="Paracétamol">
+                <label for="paracetamol">Paracétamol</label><br>
+                <input type="checkbox" id="ibuprofene" name="medicament[]" value="Ibuprofène">
+                <label for="ibuprofene">Ibuprofène</label><br>
+                <input type="checkbox" id="amoxicilline" name="medicament[]" value="Amoxicilline">
+                <label for="amoxicilline">Amoxicilline</label><br>
+                <input type="checkbox" id="autre_medicament_checkbox" name="medicament[]" value="Autre">
+                <label for="autre_medicament_checkbox">Autre medicament</label><br>
+                <input type="text" class="form-control" id="autre" name="autre_medicament"
+                    placeholder="Autre medicament">
+            </div>
+
+            
+
+            <div class="form-group">
+                <label for="posologie">Posologie :</label><br>
+                <input type="checkbox" id="poso_paracetamol" name="posologie[]"
+                    value="Paracétamol:Prendre 1 comprimé toutes les 4-6 heures au besoin">
+                <label for="poso_paracetamol">Paracétamol: Prendre 1 comprimé toutes les 4-6 heures au besoin</label><br>
+                <input type="checkbox" id="poso_ibuprofene" name="posologie[]"
+                    value="Ibuprofène:Prendre 1 comprimé toutes les 6 heures">
+                <label for="poso_ibuprofene">Ibuprofène: Prendre 1 comprimé toutes les 6 heures</label><br>
+                <input type="checkbox" id="poso_amoxicilline" name="posologie[]"
+                    value="Amoxicilline:Prendre 1 comprimé toutes les 8 heures">
+                <label for="poso_amoxicilline">Amoxicilline: Prendre 1 comprimé toutes les 8 heures</label><br>
+                <input type="checkbox" id="autre_medicament_checkbox" name="medicament[]" value="Autre">
+                <label for="autre_medicament_checkbox">Autre posologie</label><br>
+                <input type="text" class="form-control" id="autre_posologie" name="autre_posologie"
+                    placeholder="Autre posologie">
+                <!-- Ajoutez d'autres posologies ici si nécessaire -->
+            </div>
+            
+
+            <div class="form-group">
+                <label for="email_patient">Email du patient :</label>
+                <input type="email" class="form-control" id="email_patient" name="email_patient" required>
+            </div>
+            <div class="form-group">
+                <label for="email_medecin">Email du médecin :</label>
+                <input type="email" class="form-control" id="email_medecin" name="email_medecin" required>
+            </div>
+            <div class="form-group">
+                <label for="date_creation">Date :</label>
+                <input type="date" class="form-control" id="date_creation" name="date_creation" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Ajouter</button>
+        </form>
+    </div>
+
+    <script>
+        // Fonction pour afficher le champ de texte "Autre médicament" lorsqu'une option différente est sélectionnée
+        function checkMedicament() {
+            var autreMedicamentInput = document.getElementById("autre_medicament");
+            var medicamentCheckboxes = document.querySelectorAll('input[name="medicament[]"]');
+            var autreMedicamentCheckbox = medicamentCheckboxes[medicamentCheckboxes.length - 1];
+
+if (autreMedicamentCheckbox.checked) {
+    autreMedicamentInput.style.display = "block";
+} else {
+    autreMedicamentInput.style.display = "none";
+}
+}
+
+// Appeler la fonction lorsqu'un changement est détecté dans les cases à cocher des médicaments
+var medicamentCheckboxes = document.querySelectorAll('input[name="medicament[]"]');
+medicamentCheckboxes.forEach(function (checkbox) {
+checkbox.addEventListener('change', checkMedicament);
+});
+</script>
+</body>
+
+</html>
+
+<?php
+// Connexion à la base de données (à adapter selon vos paramètres)
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "connect";
+
+// Création de la connexion
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Vérification de la connexion
+if ($conn->connect_error) {
+    die("Connexion échouée: " . $conn->connect_error);
+}
+
+// Vérification si le formulaire est soumis
+// Vérification si le formulaire est soumis
+// Vérification si le formulaire est soumis
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Vérification des champs requis
+    if (isset($_POST["nom_patient"]) && isset($_POST["prenom_patient"]) && isset($_POST["id_dossier"]) && isset($_POST["email_patient"]) && isset($_POST["email_medecin"]) && isset($_POST["date_creation"]) && isset($_POST["medicament"]) && isset($_POST["posologie"])) {
+
+        // Récupération des données du formulaire
+        $nom_patient = $_POST["nom_patient"];
+        $prenom_patient = $_POST["prenom_patient"];
+        $id_dossier = $_POST["id_dossier"];
+        $email_patient = $_POST["email_patient"];
+        $email_medecin = $_POST["email_medecin"];
+        $date_creation = $_POST["date_creation"]; // Utiliser la variable correcte ici
+        $medicaments = $_POST["medicament"];
+        $posologie = $_POST["posologie"];
+
+        // Insertion des données dans la base de données
+        $sql = "INSERT INTO ordonnance (nom_patient, prenom_patient, id_dossier, email_patient, email_medecin, date_creation, medicaments, posologie) VALUES ('$nom_patient', '$prenom_patient', '$id_dossier', '$email_patient', '$email_medecin', '$date_creation', '" . implode(",", $medicaments) . "', '" . implode(",", $posologie) . "')";
+
+        if ($conn->query($sql) === TRUE) {
+            echo "Les données ont été insérées avec succès.";
+        } else {
+            echo "Erreur lors de l'insertion des données: " . $conn->error;
+        }
+
+        // Fermeture de la connexion à la base de données
+        $conn->close();
+    } else {
+        echo "Tous les champs du formulaire doivent être remplis.";
+    }
+}
+
+
+
+?>

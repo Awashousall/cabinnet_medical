@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulter Dossier Médical</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <h1>Consulter Dossier Médical</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Numéro de Dossier</th>
+                    <th scope="col">ID Patient</th>
+                    <th scope="col">Nom Patient</th>
+                    <th scope="col">Prénom Patient</th>
+                    <th scope="col">Mail Patient</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Heure</th>
+                    <th scope="col">Poids</th>
+                    <th scope="col">Température</th>
+                    <th scope="col">Remarque</th>
+                    <th scope="col">Bilan</th>
+                    <th scope="col">Maladie</th>
+                    <th scope="col">Symptômes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php include('consuterdossier.php'); ?>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

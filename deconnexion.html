@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation de déconnexion</title>
+    <script>
+        function confirmerDeconnexion() {
+            if (confirm("Êtes-vous sûr de vouloir vous déconnecter?")) {
+                // Redirection vers la page de déconnexion si l'utilisateur confirme
+                window.location.href = "deconnexion.php";
+            } else {
+                // Rester sur la page actuelle si l'utilisateur annule
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Confirmation de déconnexion</h2>
+    <p>Cliquez sur le bouton ci-dessous pour vous déconnecter.</p>
+    <button onclick="confirmerDeconnexion()">Se déconnecter</button>
+</body>
+
+</html>

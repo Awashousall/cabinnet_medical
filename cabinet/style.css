@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Couleur de fond */
+    text-align: center; /* Centrage du contenu */
+    padding-top: 50px; /* Espacement en haut */
+}
+
+h2 {
+    color: #333333; /* Couleur du texte */
+}
+
+form {
+    background-color: #ffffff; /* Couleur de fond du formulaire */
+    width: 300px; /* Largeur du formulaire */
+    margin: 0 auto; /* Centrage horizontal */
+    padding: 20px; /* Espacement interne */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre */
+}
+
+label {
+    display: block; /* Affichage en bloc */
+    margin-bottom: 8px; /* Espacement en bas */
+    color: #666666; /* Couleur du texte */
+}
+
+input[type="email"],
+input[type="password"],
+select {
+    width: 100%; /* Largeur pleine */
+    padding: 10px; /* Espacement interne */
+    margin-bottom: 20px; /* Espacement en bas */
+    border: 1px solid #cccccc; /* Bordure */
+    border-radius: 4px; /* Coins arrondis */
+    box-sizing: border-box; /* Inclure la bordure dans la taille */
+}
+
+select {
+    height: 40px; /* Hauteur des menus déroulants */
+}
+
+input[type="submit"] {
+    background-color: #4caf50; /* Couleur de fond du bouton */
+    color: white; /* Couleur du texte */
+    padding: 12px 20px; /* Espacement interne */
+    border: none; /* Pas de bordure */
+    border-radius: 4px; /* Coins arrondis */
+    cursor: pointer; /* Curseur pointeur */
+    transition: background-color 0.3s ease; /* Animation */
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049; /* Couleur de fond au survol */
+}
+
+h4 {
+    margin-top: 20px; /* Espacement en haut */
+}
+
+h4 a {
+    color: #4caf50; /* Couleur du lien */
+    text-decoration: none; /* Pas de soulignement */
+}
+
+h4 a:hover {
+    text-decoration: underline; /* Soulignement au survol */
+}
+

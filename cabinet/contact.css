@@ -1,0 +1,35 @@
+body {
+    background-color: #f2f7ff; /* Couleur de fond bleu clair */
+    color: #333; /* Couleur de texte principale */
+}
+
+.container {
+    background-color: #fff; /* Fond blanc pour le contenu */
+    padding: 30px;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Ombre légère */
+}
+
+h1, h3 {
+    color: #007bff; /* Bleu pour les titres principaux */
+}
+
+.btn-primary {
+    background-color: #007bff; /* Bleu pour les boutons */
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Bleu foncé au survol */
+    border-color: #0056b3;
+}
+
+.form-control {
+    border-color: #007bff; /* Bordure bleue pour les champs de formulaire */
+}
+
+.form-control:focus {
+    border-color: #0056b3; /* Bordure bleue foncée au focus */
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
